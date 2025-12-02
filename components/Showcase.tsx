@@ -84,7 +84,7 @@ export const Showcase: React.FC = () => {
                             <div className="w-full h-full bg-bone-50 overflow-y-auto no-scrollbar relative">
                                 {/* Header Image */}
                                 <div style={{
-                                    background: "linear-gradient(90deg, #FF0000 0%, #DC2626 50%, #FFBE0D 100%)",
+                                    background: "linear-gradient(0deg, #FF3C00 0%, #FFBB00 100%)",
                                 }} className="h-40 bg-black relative">
                                     <div className="absolute bottom-4 left-4 font-bold text-white text-xl shadow-sm z-10">Burger House</div>
                                 </div>
@@ -107,10 +107,7 @@ export const Showcase: React.FC = () => {
                                         </div>
                                     ))}
                                 </div>
-                                {/* FAB */}
-                                <div className="absolute bottom-6 right-6 w-12 h-12 bg-stone-900 rounded-full flex items-center justify-center shadow-lg text-white">
-                                    <Smartphone className="w-5 h-5" />
-                                </div>
+
                             </div>
                         </div>
 
