@@ -14,26 +14,25 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Inicio', href: '#hero' },
-    { name: 'Demo', href: '#showcase' },
-    { name: 'Funcionalidades', href: '#features' },
-    { name: 'Planes', href: '#pricing' },
-    { name: 'Contacto', href: '#contact' },
+    { name: 'Inicio', href: '#inicio' },
+    { name: 'Demo', href: '#demo' },
+    { name: 'Funcionalidades', href: '#funcionalidades' },
+    { name: 'Planes', href: '#planes' },
+    { name: 'Contacto', href: '#contacto' },
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/90 backdrop-blur-md border-b border-slate-800 py-3' : 'bg-transparent py-5'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-transparent backdrop-blur-lg border-b border-gray-400/20 py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-            <div className="bg-gradient-to-tr from-primary-500 to-accent-500 p-2 rounded-lg">
+          <div className="shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+            <div className="bg-linear-to-tr from-primary-500 to-accent-500 p-2 rounded-lg">
               <UtensilsCrossed className="h-6 w-6 text-white" />
             </div>
-            <span className="font-bold text-xl tracking-tight text-white">GastroQR</span>
+            <span className="font-bold text-xl tracking-tight text-white">QMenú</span>
           </div>
-          
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="flex items-baseline gap-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
@@ -48,7 +47,6 @@ export const Navbar: React.FC = () => {
               </a>
             </div>
           </div>
-          
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -61,7 +59,6 @@ export const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-slate-900 border-b border-slate-800">

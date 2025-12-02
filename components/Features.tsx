@@ -46,8 +46,8 @@ const featuresList = [
 
 export const Features: React.FC = () => {
   return (
-    <section id="features" className="py-24 bg-slate-950 relative overflow-hidden">
-        {/* Background Blob */}
+    <section id="funcionalidades" className="py-24 bg-slate-950 relative overflow-hidden">
+      {/* Background Blob */}
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary-900/10 rounded-full blur-[128px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
