@@ -61,11 +61,11 @@ const plans: PricingPlan[] = [
 
 export const Pricing: React.FC = () => {
   return (
-    <section id="planes" className="py-24 bg-[#050427]">
+    <section id="planes" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Planes Transparentes</h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold text-stone-900 mb-4">Planes Transparentes</h2>
+          <p className="text-stone-600 max-w-2xl mx-auto text-lg">
             Elige la opción que mejor se adapte a tu negocio. Sin comisiones ocultas por pedido.
           </p>
         </div>
@@ -75,39 +75,39 @@ export const Pricing: React.FC = () => {
             <div
               key={index}
               className={`relative flex flex-col p-8 rounded-2xl border ${plan.recommended
-                ? 'bg-slate-800/80 border-primary-500 shadow-2xl shadow-primary-900/20'
-                : 'bg-slate-900 border-slate-800 hover:border-slate-700'
+                  ? 'bg-white border-primary-500 shadow-2xl shadow-primary-900/10 scale-105 z-10'
+                  : 'bg-bone-50 border-bone-200 hover:border-bone-300'
                 } transition-all duration-300`}
             >
               {plan.recommended && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary-500 to-accent-500 text-white px-4 py-1 rounded-full text-xs font-bold tracking-wide uppercase">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary-600 to-red-500 text-white px-4 py-1 rounded-full text-xs font-bold tracking-wide uppercase shadow-lg">
                   Recomendado
                 </div>
               )}
 
               <div className="mb-6">
-                <h3 className="text-xl font-bold text-white">{plan.name}</h3>
-                <p className="text-slate-400 text-sm mt-2 min-h-[40px]">{plan.description}</p>
+                <h3 className={`text-xl font-bold ${plan.recommended ? 'text-primary-600' : 'text-stone-900'}`}>{plan.name}</h3>
+                <p className="text-stone-500 text-sm mt-2 min-h-[40px]">{plan.description}</p>
               </div>
 
               <div className="mb-6 flex items-baseline">
-                <span className="text-4xl font-extrabold text-white">{plan.price}</span>
-                <span className="text-slate-500 ml-2">{plan.period}</span>
+                <span className="text-4xl font-extrabold text-stone-900">{plan.price}</span>
+                <span className="text-stone-500 ml-2">{plan.period}</span>
               </div>
 
               <ul className="space-y-4 mb-8 flex-grow">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start">
-                    <Check className={`h-5 w-5 mr-3 flex-shrink-0 ${plan.recommended ? 'text-primary-400' : 'text-slate-500'}`} />
-                    <span className="text-slate-300 text-sm">{feature}</span>
+                    <Check className={`h-5 w-5 mr-3 flex-shrink-0 ${plan.recommended ? 'text-primary-600' : 'text-stone-400'}`} />
+                    <span className="text-stone-600 text-sm">{feature}</span>
                   </li>
                 ))}
               </ul>
 
               <button
                 className={`w-full py-3 px-4 rounded-xl font-bold transition-all ${plan.recommended
-                  ? 'bg-primary-600 hover:bg-primary-500 text-white shadow-lg shadow-primary-900/40'
-                  : 'bg-slate-800 hover:bg-slate-700 text-white border border-slate-700'
+                    ? 'bg-primary-600 hover:bg-primary-700 text-white shadow-lg shadow-primary-600/30'
+                    : 'bg-white hover:bg-bone-100 text-stone-700 border border-bone-300'
                   }`}
               >
                 {plan.cta}

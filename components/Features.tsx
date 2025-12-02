@@ -46,27 +46,28 @@ const featuresList = [
 
 export const Features: React.FC = () => {
   return (
-    <section id="funcionalidades" className="py-24 bg-slate-950 relative overflow-hidden">
-      {/* Background Blob */}
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary-900/10 rounded-full blur-[128px] pointer-events-none"></div>
+    <section id="caracteristicas" className="py-24 bg-bone-100 relative overflow-hidden">
+      {/* Background Blobs */}
+      <div className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-red-100/40 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-orange-100/40 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-primary-500 font-bold tracking-wide uppercase text-sm mb-3">Características</h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">Todo lo que tu restaurante necesita</h3>
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+          <h2 className="text-primary-600 font-bold tracking-wide uppercase text-sm mb-3">Características</h2>
+          <h3 className="text-3xl md:text-5xl font-bold text-stone-900 mb-6">Todo lo que tu restaurante necesita</h3>
+          <p className="text-stone-600 max-w-2xl mx-auto text-lg">
             Una herramienta potente y fácil de usar para digitalizar tu negocio gastronómico.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {featuresList.map((feature, index) => (
-            <div key={index} className="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-primary-500/30 hover:bg-slate-800/80 transition-all duration-300 group">
-              <div className="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 text-primary-400 group-hover:scale-110 group-hover:bg-primary-900/20 transition-all">
+            <div key={index} className="bg-white p-6 rounded-2xl border border-bone-300 shadow-sm hover:shadow-xl hover:shadow-primary-900/5 hover:-translate-y-1 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-4 text-primary-600 group-hover:scale-110 group-hover:bg-primary-600 group-hover:text-white transition-all duration-300">
                 {feature.icon}
               </div>
-              <h4 className="text-lg font-bold text-white mb-2">{feature.title}</h4>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <h4 className="text-lg font-bold text-stone-900 mb-2">{feature.title}</h4>
+              <p className="text-stone-600 text-sm leading-relaxed">
                 {feature.description}
               </p>
             </div>
