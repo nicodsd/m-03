@@ -9,7 +9,7 @@ import { Footer } from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#0b0a25] flex flex-col">
+    <div className="min-h-screen bg-bone-100 flex flex-col">
       <Navbar />
       <main className="grow">
         <Hero />
