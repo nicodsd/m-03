@@ -13,7 +13,7 @@ export const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
-    
+
     // Simulate API call
     setTimeout(() => {
       if (formData.name && formData.email) {
@@ -34,16 +34,16 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-slate-950 relative">
+    <section id="contacto" className="py-24 bg-slate-950 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          
+
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">¿Listo para modernizar tu local?</h2>
             <p className="text-slate-400 text-lg mb-8">
-              Únete a miles de restaurantes que ya usan GastroQR. Si tienes dudas o necesitas un plan personalizado para tu franquicia, escríbenos.
+              Únete a cientos de restaurantes que ya usan GastroQR. Si tienes dudas o necesitas un plan personalizado para tu negocio, escribenos.
             </p>
-            
+
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="bg-primary-900/30 p-3 rounded-lg mr-4">
@@ -54,14 +54,14 @@ export const Contact: React.FC = () => {
                   <p className="text-slate-400">hola@gastroqr.app</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="bg-primary-900/30 p-3 rounded-lg mr-4">
                   <MapPin className="h-6 w-6 text-primary-400" />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Oficinas Centrales</h4>
-                  <p className="text-slate-400">Av. Gastronomía 123, Piso 4<br/>Ciudad de México, México</p>
+                  <p className="text-slate-400">Av. Gastronomía 123, Piso 4<br />Ciudad de México, México</p>
                 </div>
               </div>
             </div>
@@ -82,11 +82,11 @@ export const Contact: React.FC = () => {
                   placeholder="Tu nombre"
                 />
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">Email</label>
-                    <input
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                  <input
                     type="email"
                     id="email"
                     name="email"
@@ -95,11 +95,11 @@ export const Contact: React.FC = () => {
                     onChange={handleChange}
                     className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all placeholder-slate-600"
                     placeholder="tucorreo@ejemplo.com"
-                    />
+                  />
                 </div>
-                 <div>
-                    <label htmlFor="restaurant" className="block text-sm font-medium text-slate-300 mb-2">Nombre del Restaurante</label>
-                    <input
+                <div>
+                  <label htmlFor="restaurant" className="block text-sm font-medium text-slate-300 mb-2">Nombre del Restaurante</label>
+                  <input
                     type="text"
                     id="restaurant"
                     name="restaurant"
@@ -107,10 +107,10 @@ export const Contact: React.FC = () => {
                     onChange={handleChange}
                     className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all placeholder-slate-600"
                     placeholder="Ej. La Trattoria"
-                    />
+                  />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">Mensaje</label>
                 <textarea
@@ -123,11 +123,11 @@ export const Contact: React.FC = () => {
                   placeholder="¿Cómo podemos ayudarte?"
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-500 hover:to-accent-500 text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:-translate-y-0.5 shadow-lg flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full bg-linear-to-r from-primary-600 to-accent-600 hover:from-primary-500 hover:to-accent-500 text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:-translate-y-0.5 shadow-lg flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {status === 'loading' ? (
                   <>
@@ -145,7 +145,7 @@ export const Contact: React.FC = () => {
                   </>
                 )}
               </button>
-              
+
               {status === 'success' && (
                 <p className="text-green-400 text-sm text-center animate-fade-in">Gracias. Un asesor gastronómico te contactará pronto.</p>
               )}
